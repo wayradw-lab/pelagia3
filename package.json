@@ -1,0 +1,13 @@
+{
+  "name": "pelagia-ocean-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static, accessible ocean-science presentation for a Grade 9 classroom.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  },
+  "engines": { "node": ">=18" }
+}

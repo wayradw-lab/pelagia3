@@ -1,0 +1,30 @@
+/* Saltwake-style layer: fonts, thick frame, pill buttons, ring cursor. Blue and white only. */
+:root{--sw-line:#b8e5de;--sw-gap:#06202f}
+body::after{content:"";position:fixed;inset:10px;border:5px solid var(--sw-line);border-radius:30px;box-shadow:0 0 0 80px #020b12;pointer-events:none;z-index:40}
+main{position:relative;z-index:2;margin:0 16px}header{position:relative;z-index:20;padding:14px 30px!important}footer{padding-left:30px!important;padding-right:30px!important}
+#sw{position:fixed;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}#sw path{stroke:#d7f1ee;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}#sw.up{z-index:6}
+#shade{position:fixed;left:-12%;top:-12%;width:124%;height:124%;mix-blend-mode:screen;opacity:.22;pointer-events:none;z-index:8;will-change:transform}
+#s0 .hero{background:radial-gradient(ellipse at 50% -10%,rgba(184,229,222,.35),transparent 55%)!important;justify-content:flex-start;padding-top:clamp(8px,3vh,40px)}.hero .wave{display:none}
+h1,h2{font-family:"Goudy Bookletter 1911","Sorts Mill Goudy",Georgia,serif!important;font-weight:400!important;text-transform:uppercase;letter-spacing:-.045em!important;line-height:.98}
+h1{text-shadow:none!important}.g h2,.fin h2,dialog h2{text-transform:none;letter-spacing:-.02em!important}
+.hero h2{font-family:"Sorts Mill Goudy",Georgia,serif!important;letter-spacing:.2em!important;font-size:clamp(.9rem,1.6vw,1.45rem)!important}
+.by,.eyebrow{font-family:"Sorts Mill Goudy",Georgia,serif!important;font-size:.95rem!important;font-weight:400!important;letter-spacing:.2em!important}
+header>b{font:400 1.7rem "Goudy Bookletter 1911",Georgia,serif;letter-spacing:-.03em!important}#num,#ttl{font:700 .72rem "Open Sans",sans-serif;letter-spacing:.17em;text-transform:uppercase}
+button,a.b{font-family:"Josefin Sans","Open Sans",sans-serif!important;font-weight:600;text-transform:uppercase;letter-spacing:.03em;border:2.5px solid var(--sw-line)!important;border-radius:999px!important;box-shadow:0 5px 0 -1px var(--sw-gap),0 5px 0 2px var(--sw-line);margin-bottom:7px;transition:transform .25s,box-shadow .25s,background .2s}
+button:hover:not(:disabled),a.b:hover{transform:translateY(3px);box-shadow:0 2px 0 -1px var(--sw-gap),0 2px 0 2px var(--sw-line)}button:disabled{box-shadow:none;opacity:.45}
+.opt{text-transform:none;letter-spacing:0;font-weight:600;border-radius:22px!important}
+#cur,#ping{position:fixed;left:0;top:0;z-index:60;pointer-events:none;border-radius:50%;display:none;width:40px;height:40px;margin:-20px}
+html.fine #cur,html.fine #ping{display:block}html.fine,html.fine *{cursor:none}html.fine dialog,html.fine dialog *{cursor:auto}
+#cur{border:5px solid #fff;mix-blend-mode:difference}#ping{border:1.5px solid #fff;opacity:0}
+dialog{border:3px solid var(--sw-line)!important;border-radius:28px!important;background:linear-gradient(160deg,#0c3a52,#04111d)!important;color:#f2f7f7;padding:28px!important;max-width:min(960px,92vw);box-shadow:0 30px 90px #000a}
+dialog::backdrop{background:rgba(2,11,18,.72);backdrop-filter:blur(6px)}
+#dg [data-g]{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:6px;min-height:92px;padding:14px 16px!important;border-radius:20px!important;text-align:left;text-transform:none;letter-spacing:0;background:rgba(18,103,130,.28)}
+#dg [data-g] small{font:700 .7rem "Open Sans",sans-serif;letter-spacing:.2em;color:#45c6c0}#dg [data-g] span{font:400 1.3rem/1.05 "Goudy Bookletter 1911",Georgia,serif;letter-spacing:-.02em}
+#dg [data-g].cur{background:#b8e5de;color:#04111d}#dg [data-g].cur small{color:#0a4a5c}
+@media(max-width:700px){body::after{inset:6px;border-radius:20px;border-width:4px}header{padding:10px 18px!important}}
+dialog{margin:auto!important;width:min(960px,92vw);max-height:88vh;overflow:auto}dialog .grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))!important}
+header{padding-top:24px!important;padding-bottom:10px!important}
+#bgv{position:fixed;left:0;top:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+#bgv-shade{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(3,13,21,.5),rgba(3,13,21,.82));transition:opacity .8s}
+body:has(#s0.on) #bgv-shade{opacity:.5}
+.webhint{margin:0 0 10px;color:#b9cdd5;font-size:.95rem}

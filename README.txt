@@ -1,0 +1,1 @@
+The requested local photo assets could not be downloaded in the execution environment. The website currently loads verified image URLs from NASA and NOAA source pages and displays a graceful fallback when they are unavailable. See ../CREDITS.md for exact source pages and outstanding licensing/offline work.
